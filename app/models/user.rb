@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :email, :first_name, :last_name, :session_token, :password_digest, presence: true
+  validates :email, :first_name, :last_name, :category_id, :session_token, :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, uniqueness: true
 
@@ -15,6 +15,10 @@ class User < ApplicationRecord
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
+  end
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
   end
 
   def is_password?(password)
