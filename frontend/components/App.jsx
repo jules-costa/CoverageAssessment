@@ -1,9 +1,10 @@
 import React from 'react';
 import GreetingContainer from './greeting_container';
+import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <GreetingContainer />
+    <Route path="/" component={GreetingContainer} />
   </div>
 );
 
