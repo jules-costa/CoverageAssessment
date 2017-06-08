@@ -24,6 +24,10 @@ class Greeting extends React.Component {
     this.setState({ modalOpen: true })
   }
 
+  update(field) {
+    return (e) => this.setState({ [field] : e.target.value });
+  }
+
   render() {
     return(
       <div>
@@ -43,7 +47,31 @@ class Greeting extends React.Component {
             beforeClose: 'myOverlayClass_before-close'
           }}
           >
-            <h1> Modal content </h1>
+            <h1>Auth Form</h1>
+            <label>First Name
+              <input type="text"
+                className="auth-field name"
+                value={this.state.first_name}
+                onChange={this.update('first_name')} />
+            </label>
+            <label>Last Name
+              <input type="text"
+                className="auth-field name"
+                value={this.state.last_name}
+                onChange={this.update('last_name')} />
+            </label>
+            <label>Email
+              <input type="text"
+                className="auth-field email"
+                value={this.state.email}
+                onChange={this.update('email')} />
+            </label>
+            <label>Password
+              <input type="text"
+                className="auth-field password"
+                value={this.state.password}
+                onChange={this.update('password')} />
+            </label>
           </Modal>
         </div>
     );
