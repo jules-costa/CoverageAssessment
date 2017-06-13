@@ -1,10 +1,20 @@
 // Place all the styles related to the Api::Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.hero {
+  display: block;
+  height: 100%;
+  // background-color: red;
+  background-image: url('http://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1497380226/kate-chikina-15746_jrkxrq.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .landing-page-container {
   display: flex;
   width: 75%;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .landing-page {
@@ -13,9 +23,24 @@
 }
 
 .about-author {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-site {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin: 16px 0;
+}
+
+.author-image {
+  border-radius: 300px;
+  width: 250px;
+  height: auto;
+  margin: 22px 0;
 }
