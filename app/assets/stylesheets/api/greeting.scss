@@ -1,19 +1,33 @@
 // Place all the styles related to the Api::Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.hero {
-  display: block;
-  height: 100%;
-  background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1497394394/joey-pilgrim-268673_yzdmry.jpg');
-  background-position: center;
-  background-size: cover;
+
+
+nav {
+  background: rgba(26, 145, 108, 0.55);
+  padding-left: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+.logo-image {
+  width: 45px;
+  height: auto;
+  margin-right: 16px;
 }
 
 .landing-page-container {
   display: flex;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
-  background-color: transparent;
 }
 
 .landing-page {
@@ -41,5 +55,8 @@
   border-radius: 300px;
   width: 250px;
   height: auto;
-  margin: 22px 0;
+  margin: 50px 0;
+  padding: 7px;
+  border-bottom: 2px solid $green;
+  border-left: 2px solid $green;
 }

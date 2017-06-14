@@ -14,6 +14,7 @@ class Session extends React.Component {
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   closeModal() {
@@ -26,6 +27,10 @@ class Session extends React.Component {
 
   update(field) {
     return (e) => this.setState({ [field] : e.target.value });
+  }
+
+  handleSubmit() {
+
   }
 
   render() {
@@ -69,7 +74,7 @@ class Session extends React.Component {
                   placeholder="Password (min. 6 characters)"
                   value={this.state.password}
                   onChange={this.update('password')} />
-                <button className="modal-button" type="submit">Submit</button>
+                <button className="modal-button" type="submit" onClick={this.handleSubmit}>Submit</button>
             </section>
               <h5 className="auth-form">I will only use your email to answer your insurance questions.
                 You will not be solicited in any way.
