@@ -28,11 +28,13 @@ img {
 input[type="password"],
 input[type="text"],
 input[type="submit"],
+label,
 textarea,
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 button,

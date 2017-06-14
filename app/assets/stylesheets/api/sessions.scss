@@ -1,3 +1,32 @@
 // Place all the styles related to the Api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-button {
+  padding: 6px 12px;
+  background-color: $lightgrey;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: 'Ubuntu' sans-serif;
+}
+
+.ReactModal__Body--open {
+  width: 500px;
+  height: 500px;
+  border: 1px solid $lightgrey;
+
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.auth-field {
+  border-bottom: 1px solid $lightgrey;
+}
