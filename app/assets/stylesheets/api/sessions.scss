@@ -5,28 +5,41 @@
 .modal-button {
   padding: 6px 12px;
   background-color: $lightgrey;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 12px;
   font-family: 'Ubuntu' sans-serif;
+  text-align: center;
+  width: 200px;
 }
 
 .ReactModal__Body--open {
   width: 500px;
-  height: 500px;
+  height: auto;
   border: 1px solid $lightgrey;
-
+  border-radius: 6px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .input-fields {
   display: flex;
   flex-direction: column;
-}
-
-.field-wrapper {
-  display: flex;
-  flex-direction: row;
+  margin: 0 60px;
 }
 
 .auth-field {
-  border-bottom: 1px solid $lightgrey;
+  border: 1px solid #cbcbcb;
+  padding: 14px 12px;
+  margin: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+::placeholder {
+  color: $lightgrey;
+}
+
+.auth-form {
+  text-align: center;
+  color: $darkgrey;
 }

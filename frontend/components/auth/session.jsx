@@ -47,42 +47,31 @@ class Session extends React.Component {
             beforeClose: 'myOverlayClass_before-close'
           }}
           >
-            <h3>Auth Form</h3>
+            <h3 className="auth-form">Welcome! Please replace</h3>
               <section className="input-fields">
-                <div className="field-wrapper">
-                  <label>First Name
-                    <input type="text"
-                      className="auth-field name"
-                      value={this.state.first_name}
-                      onChange={this.update('first_name')} />
-                  </label>
-                </div>
-                <div className="field-wrapper">
-                  <label>Last Name
-                    <input type="text"
-                      className="auth-field name"
-                      value={this.state.last_name}
-                      onChange={this.update('last_name')} />
-                  </label>
-                </div>
-                <div className="field-wrapper">
-                  <label>Email
-                    <input type="text"
-                      className="auth-field email"
-                      value={this.state.email}
-                      onChange={this.update('email')} />
-                  </label>
-                </div>
-                <div className="field-wrapper">
-                  <label>Password
-                    <input type="text"
-                      className="auth-field password"
-                      value={this.state.password}
-                      onChange={this.update('password')} />
-                  </label>
-                </div>
-              </section>
-              <h5>I will only use your email to answer your insurance questions.
+                <input type="text"
+                  className="auth-field name"
+                  placeholder="First name"
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')} />
+                <input type="text"
+                  className="auth-field name"
+                  placeholder="Last name"
+                  value={this.state.last_name}
+                  onChange={this.update('last_name')} />
+                <input type="text"
+                  className="auth-field email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.update('email')} />
+                <input type="password"
+                  className="auth-field password"
+                  placeholder="Password (min. 6 characters)"
+                  value={this.state.password}
+                  onChange={this.update('password')} />
+                <button className="modal-button" type="submit">replace</button>
+            </section>
+              <h5 className="auth-form">I will only use your email to answer your insurance questions.
                 You will not be solicited in any way.
                 Your password is encrypted and protected on this site.
                 I look forward to hearing from you!</h5>
