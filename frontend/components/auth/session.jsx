@@ -29,6 +29,14 @@ class Session extends React.Component {
     return (e) => this.setState({ [field] : e.target.value });
   }
 
+  navLink() {
+    if (this.props.formType === 'login') {
+      return <Link to='/signup'>sign up instead</Link>;
+    } else {
+      return <Link to='/login'>log in instead</Link>;
+    }
+  }
+
   handleSubmit() {
 
   }
@@ -52,7 +60,7 @@ class Session extends React.Component {
             beforeClose: 'myOverlayClass_before-close'
           }}
           >
-            <h3 className="auth-form">Welcome! Please login or signup</h3>
+            <h3 className="auth-form">Please {this.props.formType} or {this.navLink()}</h3>
               <section className="input-fields">
                 <input type="text"
                   className="auth-field name"
