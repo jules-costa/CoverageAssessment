@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# category1 = Category.create!(title: "Brokers & Agents")
-# category2 = Category.create!(title: "Business Leaders")
-# category3 = Category.create!(title: "Consumers")
+category1 = Category.create!(title: "Brokers & Agents")
+category2 = Category.create!(title: "Business Leaders")
+category3 = Category.create!(title: "Consumers")
 
 Post.create!(
   title: "The End",
