@@ -7,6 +7,7 @@ class PostIndex extends React.Component {
   }
 
   render() {
+    debugger;
     return(
       <div className="feed-wrapper">
         <section className="feed">

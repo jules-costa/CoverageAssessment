@@ -1,6 +1,7 @@
-export const fetchAllPosts = () => (
+export const fetchAllPosts = (categoryId) => (
   $.ajax({
     method: "GET",
-    url: "api/posts"
+    url: "api/posts",
+    data: {categoryId}
   })
 );
