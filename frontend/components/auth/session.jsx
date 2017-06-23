@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom'
 
 class Session extends React.Component {
   constructor(props) {
