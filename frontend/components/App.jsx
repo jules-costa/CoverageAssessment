@@ -7,7 +7,8 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => (
   <div>
     <Route exact path="/" component={GreetingContainer} />
-    <Route exact path="/auth" component={SessionContainer} />
+    <Route exact path="/login" component={SessionContainer} />
+    <Route exact path="/signup" component={SessionContainer} />
     <Route exact path="/posts" component={PostIndexContainer} />
   </div>
 );
