@@ -5,7 +5,7 @@ const postsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_POSTS:
-      return merge({}, action.stories);
+      return merge({}, action.posts);
     default:
       return state;
   }
