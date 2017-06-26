@@ -7,16 +7,21 @@ export const receiveAllPosts = posts => ({
   posts
 });
 
-export const fetchPost = postId => dispatch => (
-
+export const fetchPost = id => dispatch => (
+  PostAPIUtil.fetchPost(id).then(post => dispatch(receiveSinglePost(post)))
 );
 
 export const updatePost = post => dispatch => (
-
+  PostAPIUtil.updatePost(post).then(updatedPost => {
+    dispatch(receiveSinglePost(updatedPost));
+    dispatch(clearErrors());
+  }, err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
 );
 
-export const destroyPost = postId => dispatch => (
-
+export const destroyPost = id => dispatch => (
+  APostPIUtil.destroyPost(id).then(post => dispatch(receiveSinglePost(null)))
 );
 
 
