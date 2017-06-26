@@ -7,6 +7,18 @@ export const receiveAllPosts = posts => ({
   posts
 });
 
+export const fetchPost = postId => dispatch => (
+
+);
+
+export const updatePost = post => dispatch => (
+
+);
+
+export const destroyPost = postId => dispatch => (
+
+);
+
 
 export const getPosts = categoryId => dispatch => (
   PostAPIUtil.fetchAllPosts(categoryId).then(posts => dispatch(receiveAllPosts(posts)))
