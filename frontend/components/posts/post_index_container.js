@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PostIndex from './post_index';
-import { getPosts } from '../../actions/post_actions';
+import { fetchAllPosts } from '../../actions/post_actions';
 import values from 'lodash/values';
 
 const mapStateToProps = (state) => ({
@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getPosts: () => dispatch(getPosts())
+  fetchAllPosts: () => dispatch(fetchAllPosts())
 });
 
 export default connect(

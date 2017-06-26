@@ -1,10 +1,27 @@
 import * as PostAPIUtil from '../util/post_api_util';
 
 export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
+export const RECEIVE_POST = "RECEIVE_POST";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const receiveAllPosts = posts => ({
   type: RECEIVE_ALL_POSTS,
   posts
+});
+
+export const receiveSinglePost = post => ({
+  type: RECEIVE_POST,
+  post
+});
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
+});
+
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS
 });
 
 export const fetchPost = id => dispatch => (
@@ -24,7 +41,6 @@ export const destroyPost = id => dispatch => (
   APostPIUtil.destroyPost(id).then(post => dispatch(receiveSinglePost(null)))
 );
 
-
-export const getPosts = categoryId => dispatch => (
+export const fetchAllPosts = categoryId => dispatch => (
   PostAPIUtil.fetchAllPosts(categoryId).then(posts => dispatch(receiveAllPosts(posts)))
 );
