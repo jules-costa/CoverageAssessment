@@ -1,24 +1,10 @@
-import { connect } from 'react-redux';
-import PostDetail from './post_detail';
-// import { fetchPost, updatePost, destroyPost } from '../../actions/post_actions';
+import React from 'react';
 
-const selectPost = ({ posts }, postId) => {
-  const foundPost = posts[postId];
-  return foundPost || {};
-};
+class PostDetail extends React.Component {
 
-const mapStateToProps = (state, { match }) => ({
-  story: selectPost(state, parseInt(match.params.postId)),
-  currentUser: state.currentUser
-});
+  render() {
+    return <h1>hi</h1>
+  }
+}
 
-const mapDispatchToProps = dispatch => ({
-  // fetchPost: id => dispatch(fetchPost(id)),
-  // updatePost: post => dispatch(updatePost(post)),
-  // destroyPost: id => dispatch(destroyPost(id))
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PostDetail);
+export default PostDetail;

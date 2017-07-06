@@ -2,7 +2,7 @@ import React from 'react';
 import SessionContainer from './auth/session_container';
 import GreetingContainer from './greeting';
 import PostIndexContainer from './posts/post_index_container';
-import PostIndexContainer from './posts/post_detail_container';
+import PostDetailContainer from './posts/post_detail_container';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
