@@ -10,6 +10,12 @@ class PostDetail extends React.Component {
     this.props.fetchPost(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      this.props.fetchPost(nextProps.match.params.id);
+    }
+  }
+
   render() {
     console.log(this.props);
     return (
