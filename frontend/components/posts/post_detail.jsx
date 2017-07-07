@@ -2,12 +2,16 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 class PostDetail extends React.Component {
-  //
-  // componentDidMount() {
-  //   this.props.fetchPost(1)
-  // }
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchPost(this.props.match.params.id);
+  }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         {this.props.post.title}

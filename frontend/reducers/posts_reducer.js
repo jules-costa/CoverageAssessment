@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_POSTS } from '../actions/post_actions';
+import { RECEIVE_ALL_POSTS, RECEIVE_POST } from '../actions/post_actions';
 import merge from 'lodash/merge';
 
 const postsReducer = (state = {}, action) => {
@@ -6,6 +6,8 @@ const postsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_POSTS:
       return merge({}, action.posts);
+    case RECEIVE_POST:
+      return action.post;
     default:
       return state;
   }

@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import PostDetail from './post_detail';
 import { fetchPost, updatePost, destroyPost } from '../../actions/post_actions';
 
-const selectPost = ({ posts }, postId) => {
-  const foundPost = posts[postId];
+const selectPost = ({ posts }, id) => {
+  const foundPost = posts[id];
   return foundPost || {};
 };
 
 const mapStateToProps = (state, { match }) => ({
-  post: selectPost(state, parseInt(match.params.postId)),
+  post: selectPost(state, parseInt(match.params.id)),
   currentUser: state.currentUser
 });
 
