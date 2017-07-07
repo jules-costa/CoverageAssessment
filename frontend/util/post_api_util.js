@@ -5,3 +5,10 @@ export const fetchAllPosts = (categoryId) => (
     data: {categoryId}
   })
 );
+
+export const fetchPost = (postId) => (
+  $.ajax({
+    method: "GET",
+    url: `/api/posts/${postId}`
+  })
+);
