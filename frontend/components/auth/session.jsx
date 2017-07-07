@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
+import * as SessionAPIUtil from '../../actions/session_actions';
 
 class Session extends React.Component {
   constructor(props) {
@@ -39,7 +40,11 @@ class Session extends React.Component {
   }
 
   handleSubmit() {
-
+    if (this.props.formType === 'login') {
+      return SessionAPIUtil.login(this.state)
+    } else {
+      return SessionAPIUtil.signup(this.state)
+    }
   }
 
   render() {
