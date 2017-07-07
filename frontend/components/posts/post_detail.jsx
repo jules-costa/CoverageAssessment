@@ -19,9 +19,9 @@ class PostDetail extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
-        {this.props.post.title}
-        {this.props.post.body}
+      <div className="feed-wrapper">
+        <h1 className="post-title">{this.props.post.title}</h1>
+        <h4 className="post-body">{this.props.post.body}</h4>
       </div>
     )
   }
