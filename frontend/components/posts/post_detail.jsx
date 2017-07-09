@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ReactHtmlParser from 'react-html-parser';
 
 class PostDetail extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class PostDetail extends React.Component {
     return (
       <div className="feed-wrapper">
         <h1 className="post-title">{this.props.post.title}</h1>
-        <h4 className="post-body">{this.props.post.body}</h4>
+        <h4 className="post-body">{ ReactHtmlParser(this.props.post.body) }</h4>
       </div>
     )
   }
