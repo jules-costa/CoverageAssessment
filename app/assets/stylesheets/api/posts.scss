@@ -11,17 +11,26 @@
 
 .feed-item-wrapper {
   margin: 30px 0;
-  padding: 24px;
+  padding: 6px 24px;
   box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.2);
 }
 
 .post-body {
   margin: 0;
   line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.post-title-index {
+  padding: 12px 0;
+  font-size: 21px;
+  color: $green;
 }
 
 .post-title {
-  padding-bottom: 14px;
+  padding: 24px 0;
   font-size: 21px;
   color: $green;
 }

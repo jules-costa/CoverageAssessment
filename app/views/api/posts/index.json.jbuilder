@@ -3,6 +3,6 @@
     json.id post.id
     json.title post.title
     json.date post.date
-    json.truncatedBody "#{post.body[0..300]}..."
+    json.truncatedBody "#{post.body[0..200]}..."
   end
 end
