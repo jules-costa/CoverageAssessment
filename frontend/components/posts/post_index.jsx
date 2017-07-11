@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
+import NavbarContainer from '../navbar/navbar_container';
 
 class PostIndex extends React.Component {
   componentDidMount() {
@@ -8,11 +9,14 @@ class PostIndex extends React.Component {
 
   render() {
     return(
-      <div className="feed-wrapper">
-        <section className="feed">
-          {this.props.posts.map((post, i) => <PostIndexItem key={post.id} post={post} />)}
-        </section>
-      </div>
+      <section>
+        <NavbarContainer />
+        <div className="feed-wrapper">
+          <section className="feed">
+            {this.props.posts.map((post, i) => <PostIndexItem key={post.id} post={post} />)}
+          </section>
+        </div>
+      </section>
     );
   }
 }

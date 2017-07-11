@@ -1,4 +1,5 @@
 import React from 'react';
+import NavbarContainer from './navbar/navbar_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -8,10 +9,7 @@ class Greeting extends React.Component {
   render() {
     return(
       <div>
-        <nav className="navbar">
-          <img src="https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1497411299/Editingworlds.blogspot_7_s5deej.png" className="logo-image" />
-          <h2 className="logo">Coverage Assessment</h2>
-        </nav>
+        <NavbarContainer />
         <div className="hero">
           <div className="landing-page-container">
             <section className="landing-page">
@@ -27,7 +25,7 @@ class Greeting extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
