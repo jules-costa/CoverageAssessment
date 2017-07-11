@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   loggedId: Boolean(state.currentUser),
   errors: state.errors,
   formType: (location.pathname === '/login' ? 'Login' : 'Signup')
-})
+});
 
 const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
@@ -17,7 +17,6 @@ const mapDispatchToProps = (dispatch, { location }) => {
     login: user => dispatch(login(user))
   };
 };
-
 
 export default connect(
   mapStateToProps,
