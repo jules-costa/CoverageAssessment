@@ -37,8 +37,17 @@ export const updatePost = post => dispatch => (
   ))
 );
 
+export const createPost = post => dispatch => (
+  PostAPIUtil.createPost(post).then(createdPost => {
+    dispatch(receiveSinglePost(createdPost));
+    dispatch(clearErrors());
+  }, err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
+
 export const destroyPost = id => dispatch => (
-  APostPIUtil.destroyPost(id).then(post => dispatch(receiveSinglePost(null)))
+  PostAPIUtil.destroyPost(id).then(post => dispatch(receiveSinglePost(null)))
 );
 
 export const fetchAllPosts = categoryId => dispatch => (
