@@ -3,17 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .modal-button {
-  padding: 10px 0;
-  background-color: #1a916c;
-  opacity: 0.97;
-  border: 1px solid #1a916c;
+  padding: 10px 8px;
+  background-color: transparent;
   color: white;
-  border-radius: 6px;
   font-size: 14px;
   font-family: 'Ubuntu' sans-serif;
   text-align: center;
-  width: 30%;
-  margin-top: 18px;
 }
 
 .ReactModal__Body--open {
