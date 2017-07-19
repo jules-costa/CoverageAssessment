@@ -14,7 +14,7 @@ class PostForm extends React.Component {
   }
 
   update(field) {
-    this.setState([field]: )
+
   }
 
   handleSubmit(e) {

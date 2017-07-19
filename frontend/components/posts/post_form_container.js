@@ -3,7 +3,7 @@ import PostForm from './post_form';
 import { createPost, updatePost } from '../../actions/post_actions';
 
 const mapStateToProps = state => ({
-  state: state
+  errors: state.errors
 });
 
 const mapDispatchToProps = dispatch => ({
