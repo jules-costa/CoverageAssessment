@@ -3,7 +3,7 @@ import Session from './session';
 import { login, logout, signup } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  loggedId: Boolean(state.currentUser),
+  loggedIn: Boolean(state.currentUser),
   errors: state.errors,
   formType: (location.pathname === '/login' ? 'Login' : 'Signup')
 });

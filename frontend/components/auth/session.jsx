@@ -15,6 +15,12 @@ class Session extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push("/");
+    }
+  }
+
 
   update(field) {
     return (e) => this.setState({ [field] : e.target.value });
@@ -29,7 +35,6 @@ class Session extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log("here");
     e.preventDefault();
     this.props.processForm(this.state)
   }
