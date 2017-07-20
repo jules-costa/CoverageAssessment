@@ -1,5 +1,4 @@
 import React from 'react';
-// import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
 import * as SessionAPIUtil from '../../actions/session_actions';
 
@@ -11,7 +10,6 @@ class Session extends React.Component {
       first_name: "",
       last_name: "",
       password: "",
-      modalOpen: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,12 +28,10 @@ class Session extends React.Component {
     }
   }
 
-  handleSubmit() {
-    if (this.props.formType === 'login') {
-      return SessionAPIUtil.login(this.state)
-    } else {
-      return SessionAPIUtil.signup(this.state)
-    }
+  handleSubmit(e) {
+    console.log("here");
+    e.preventDefault();
+    this.props.processForm(this.state)
   }
 
   render() {
