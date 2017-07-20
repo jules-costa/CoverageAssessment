@@ -4,6 +4,7 @@ import * as SessionAPIUtil from '../../actions/session_actions';
 
 class Session extends React.Component {
   constructor(props) {
+    // console.log(this.props);
     super(props);
     this.state = {
       email: "",
