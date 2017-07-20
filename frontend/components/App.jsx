@@ -8,11 +8,10 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <Route exact path="/about" component={GreetingContainer} />
     <Route exact path="/" component={PostIndexContainer} />
-    <Route exact path="/" component={SessionContainer} />
-    {/* <Route exact path="/signup" component={SessionContainer} /> */}
-    {/* <Route exact path="/posts" component={PostIndexContainer} /> */}
+    <Route exact path="/about" component={GreetingContainer} />
+    <Route exact path="/login" component={SessionContainer} />
+    <Route exact path="/signup" component={SessionContainer} />
     <Route exact path="/posts/:id" component={PostDetailContainer} />
     <Route exact path="/write" component={PostFormContainer} />
   </div>
