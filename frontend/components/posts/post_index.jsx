@@ -9,14 +9,17 @@ class PostIndex extends React.Component {
 
   render() {
     return(
-      <section>
+      <div>
         <NavbarContainer />
-        <div className="feed-wrapper">
-          <section className="feed">
-            {this.props.posts.map((post, i) => <PostIndexItem key={post.id} post={post} />)}
-          </section>
-        </div>
-      </section>
+        <section>
+          <div className="feed-wrapper">
+            <section className="feed">
+              {this.props.posts.map((post, i) => <PostIndexItem key={post.id} post={post} />)}
+            </section>
+          </div>
+        </section>
+
+      </div>
     );
   }
 }
