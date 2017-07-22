@@ -13,6 +13,7 @@ class Session extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps (nextProps) {
@@ -40,6 +41,18 @@ class Session extends React.Component {
     this.props.processForm(this.state)
   }
 
+  renderErrors() {
+     return(
+       <ul>
+         {this.props.errors.map((error, i) => (
+           <li key={`error-${i}`}>
+             *** {error} ***
+           </li>
+         ))}
+       </ul>
+     );
+   }
+
   render() {
     return(
       <div>
@@ -65,6 +78,9 @@ class Session extends React.Component {
               placeholder="Password (min. 6 characters)"
               value={this.state.password}
               onChange={this.update('password')} />
+              <div className="session-errors">
+                {this.renderErrors()}
+              </div>
             <button className="modal-button" type="submit" onClick={this.handleSubmit}>Submit</button>
           </section>
           <h5 className="auth-form">I will only use your email to answer your insurance questions.
