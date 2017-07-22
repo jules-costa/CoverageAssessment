@@ -14,6 +14,7 @@ class Session extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.showAdditionalFields = this.showAdditionalFields.bind(this);
   }
 
   componentWillReceiveProps (nextProps) {
@@ -41,6 +42,25 @@ class Session extends React.Component {
     this.props.processForm(this.state)
   }
 
+  showAdditionalFields() {
+    if (this.props.formType === 'signup') {
+      return (
+        <div>
+          <input type="text"
+            className="auth-field name"
+            placeholder="First name"
+            value={this.state.first_name}
+            onChange={this.update('first_name')} />
+          <input type="text"
+            className="auth-field name"
+            placeholder="Last name"
+            value={this.state.last_name}
+            onChange={this.update('last_name')} />
+        </div>
+      )
+    }
+  }
+
   renderErrors() {
      return(
        <ul>
@@ -58,26 +78,19 @@ class Session extends React.Component {
       <div>
         <h3 className="auth-form">Please {this.props.formType} or {this.navLink()}</h3>
           <section className="input-fields">
-            <input type="text"
-              className="auth-field name"
-              placeholder="First name"
-              value={this.state.first_name}
-              onChange={this.update('first_name')} />
-            <input type="text"
-              className="auth-field name"
-              placeholder="Last name"
-              value={this.state.last_name}
-              onChange={this.update('last_name')} />
-            <input type="text"
-              className="auth-field email"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.update('email')} />
-            <input type="password"
-              className="auth-field password"
-              placeholder="Password (min. 6 characters)"
-              value={this.state.password}
-              onChange={this.update('password')} />
+            {this.showAdditionalFields()}
+            <div>
+              <input type="text"
+                className="auth-field email"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.update('email')} />
+              <input type="password"
+                className="auth-field password"
+                placeholder="Password (min. 6 characters)"
+                value={this.state.password}
+                onChange={this.update('password')} />
+            </div>
               <div className="session-errors">
                 {this.renderErrors()}
               </div>
