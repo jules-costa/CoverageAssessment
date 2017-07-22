@@ -10,7 +10,8 @@ class Navbar extends React.Component {
   }
 
   sessionLinks () {
-    if (currentUser === null) {
+    console.log(this.props);
+    if (this.props.currentUser === null) {
       return (
         <div className="session-links">
           <Link to="/signup" className="auth-link">Sign Up</Link>
@@ -20,7 +21,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className="header-group">
-          <Link to={`/users/${session.id}`} className="user-logo"><img className="user-image-small" src={ session.image_url } /></Link>
+          <Link to={`/users/${this.props.currentUser.id}`} className="user-logo"><img className="user-image-small" src={this.props.currentUser.image_url} /></Link>
           <a href='' className="logout-link" onClick={this.handleLogout}>Log Out</a>
         </div>
       )
