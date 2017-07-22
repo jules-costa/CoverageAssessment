@@ -10,7 +10,6 @@ class Navbar extends React.Component {
   }
 
   sessionLinks () {
-    console.log(this.props);
     if (this.props.currentUser === null) {
       return (
         <div className="session-links">
@@ -37,8 +36,12 @@ class Navbar extends React.Component {
     return (
       <section>
         <nav className="navbar">
-          <img src="https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1497411299/Editingworlds.blogspot_7_s5deej.png" className="logo-image" />
-          <h2 className="logo">Coverage Assessment</h2>
+          <Link to={"/"}>
+            <img src="https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1497411299/Editingworlds.blogspot_7_s5deej.png" className="logo-image" />
+          </Link>
+          <Link to={"/"}>
+            <h2 className="logo">Coverage Assessment</h2>
+          </Link>
         </nav>
         {this.sessionLinks()}
       </section>
