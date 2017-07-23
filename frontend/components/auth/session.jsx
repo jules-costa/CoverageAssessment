@@ -74,23 +74,24 @@ class Session extends React.Component {
 
   render() {
     return(
-      <form className="auth-form-container">
-        <h3 className="auth-form">Please {this.props.formType} or {this.navLink()}</h3>
+      <div className="behind-auth-form-container">
+        <form className="auth-form-container">
+          <h3 className="auth-form">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span></h3>
           <section className="input-fields">
             {this.showAdditionalFields()}
-              <input type="text"
-                className="auth-field email"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')} />
-              <input type="password"
-                className="auth-field password"
-                placeholder="Password (min. 6 characters)"
-                value={this.state.password}
-                onChange={this.update('password')} />
-              <div className="session-errors">
-                {this.renderErrors()}
-              </div>
+            <input type="text"
+              className="auth-field email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.update('email')} />
+            <input type="password"
+              className="auth-field password"
+              placeholder="Password (min. 6 characters)"
+              value={this.state.password}
+              onChange={this.update('password')} />
+            <div className="session-errors">
+              {this.renderErrors()}
+            </div>
             <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
           </section>
           <h5 className="auth-form">I will only use your email to answer your insurance questions.
@@ -98,6 +99,7 @@ class Session extends React.Component {
             Your password is encrypted and protected on this site.
             I look forward to hearing from you!</h5>
         </form>
+      </div>
     );
   }
 }
