@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar {
-  height: 0;
-}
 .input-fields {
   display: flex;
   flex-direction: column;
@@ -40,23 +37,27 @@
   color: $orange;
   font-size: 12px;
   text-align: center;
-  margin-bottom: 8px 0;
+  margin: 8px;
 }
 
 .auth-button {
   background-color: transparent;
   border: 1px solid $grey;
-  padding: 14px 12px;
+  padding: 12px 10px;
   border-radius: 6px;
   text-align: center;
   font-size: 14px;
-  color: $darkgrey;
-  margin: 8px;
-}
-
-.auth-button:hover {
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 75px;
   background-color: $green;
   color: white;
+  box-shadow: 2px 2px 2px $lightgrey;
+}
+
+.auth-button:active {
+  box-shadow: 0 1px $lightgrey;
+  transform: translateY(3px);
 }
 
 .behind-auth-form-container {
@@ -70,9 +71,11 @@
 .auth-form-container {
   display: flex;
   flex-direction: column;
+  flex-basis: 375px;
   width: 30%;
   margin: 0 auto;
   border-radius: 8px;
+  padding: 12px 0;
   justify-content: center;
   background-color: white;
 }

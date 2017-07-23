@@ -23,16 +23,15 @@ class Session extends React.Component {
     }
   }
 
-
   update(field) {
     return (e) => this.setState({ [field] : e.target.value });
   }
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to='/signup'>sign up instead</Link>;
+      return <Link to='/signup'>sign up</Link>;
     } else {
-      return <Link to='/login'>log in instead</Link>;
+      return <Link to='/login'>log in</Link>;
     }
   }
 
@@ -46,12 +45,12 @@ class Session extends React.Component {
       return (
         <section className="input-fields">
           <input type="text"
-            className="auth-field name"
+            className="auth-field"
             placeholder="First name"
             value={this.state.first_name}
             onChange={this.update('first_name')} />
           <input type="text"
-            className="auth-field name"
+            className="auth-field"
             placeholder="Last name"
             value={this.state.last_name}
             onChange={this.update('last_name')} />
@@ -76,28 +75,28 @@ class Session extends React.Component {
     return(
       <div className="behind-auth-form-container">
         <form className="auth-form-container">
-          <h3 className="auth-form">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span></h3>
-          <section className="input-fields">
+          <h3 className="auth-form">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span> instead</h3>
             {this.showAdditionalFields()}
-            <input type="text"
-              className="auth-field email"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.update('email')} />
-            <input type="password"
-              className="auth-field password"
-              placeholder="Password (min. 6 characters)"
-              value={this.state.password}
-              onChange={this.update('password')} />
+            <section className="input-fields">
+              <input type="text"
+                className="auth-field"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.update('email')} />
+              <input type="password"
+                className="auth-field"
+                placeholder="Password (min. 6 characters)"
+                value={this.state.password}
+                onChange={this.update('password')} />
+            </section>
             <div className="session-errors">
               {this.renderErrors()}
             </div>
             <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
-          </section>
           <h5 className="auth-form">I will only use your email to answer your insurance questions.
             You will not be solicited in any way.
             Your password is encrypted and protected on this site.
-            I look forward to hearing from you!</h5>
+          </h5>
         </form>
       </div>
     );
