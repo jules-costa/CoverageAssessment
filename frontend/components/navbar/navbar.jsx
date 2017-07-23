@@ -19,9 +19,9 @@ class Navbar extends React.Component {
       )
     } else {
       return (
-        <div className="header-group">
+        <div className="navbar-group">
           <Link to={`/users/${this.props.currentUser.id}`} className="user-logo"><img className="user-image-small" src={this.props.currentUser.image_url} /></Link>
-          <a href='' className="logout-link" onClick={this.handleLogout}>Log Out</a>
+          <a href='' className="auth-link" onClick={this.handleLogout}>Log Out</a>
         </div>
       )
     }

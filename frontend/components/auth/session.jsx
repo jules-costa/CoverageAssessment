@@ -65,7 +65,7 @@ class Session extends React.Component {
        <ul>
          {this.props.errors.map((error, i) => (
            <li key={`error-${i}`}>
-             *** {error} ***
+             * {error} *
            </li>
          ))}
        </ul>
