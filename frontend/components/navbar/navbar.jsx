@@ -12,10 +12,10 @@ class Navbar extends React.Component {
   sessionLinks () {
     if (this.props.currentUser === null) {
       return (
-        <div className="session-links">
+        <section className="navbar-group session-links">
           <Link to="/signup" className="auth-link">Sign Up</Link>
           <Link to="/login" className="auth-link">Log In</Link>
-        </div>
+        </section>
       )
     } else {
       return (
@@ -34,17 +34,17 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <section>
-        <nav className="navbar">
+      <nav className="navbar">
+        <section className="navbar-group">
           <Link to={"/"}>
             <img src="https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_400/v1497411299/Editingworlds.blogspot_7_s5deej.png" className="logo-image" />
           </Link>
           <Link to={"/"}>
             <h2 className="logo">Coverage Assessment</h2>
           </Link>
-        </nav>
-        {this.sessionLinks()}
-      </section>
+        </section>
+          {this.sessionLinks()}
+      </nav>
     );
   }
 }

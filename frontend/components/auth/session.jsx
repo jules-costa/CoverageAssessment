@@ -44,7 +44,7 @@ class Session extends React.Component {
   showAdditionalFields() {
     if (this.props.formType === 'signup') {
       return (
-        <div>
+        <section className="input-fields">
           <input type="text"
             className="auth-field name"
             placeholder="First name"
@@ -55,7 +55,7 @@ class Session extends React.Component {
             placeholder="Last name"
             value={this.state.last_name}
             onChange={this.update('last_name')} />
-        </div>
+        </section>
       )
     }
   }
@@ -74,11 +74,10 @@ class Session extends React.Component {
 
   render() {
     return(
-      <div>
+      <form className="auth-form-container">
         <h3 className="auth-form">Please {this.props.formType} or {this.navLink()}</h3>
           <section className="input-fields">
             {this.showAdditionalFields()}
-            <div>
               <input type="text"
                 className="auth-field email"
                 placeholder="Email"
@@ -89,17 +88,16 @@ class Session extends React.Component {
                 placeholder="Password (min. 6 characters)"
                 value={this.state.password}
                 onChange={this.update('password')} />
-            </div>
               <div className="session-errors">
                 {this.renderErrors()}
               </div>
-            <button className="modal-button" type="submit" onClick={this.handleSubmit}>Submit</button>
+            <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
           </section>
           <h5 className="auth-form">I will only use your email to answer your insurance questions.
             You will not be solicited in any way.
             Your password is encrypted and protected on this site.
             I look forward to hearing from you!</h5>
-        </div>
+        </form>
     );
   }
 }

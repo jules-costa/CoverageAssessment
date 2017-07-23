@@ -30,9 +30,3 @@ class Greeting extends React.Component {
 }
 
 export default Greeting;
-
-{/* <div className="about-site">
-  <h2 className="header">I've Got You Covered.</h2>
-  <p>Insurance isn’t very exciting and coverage analysis doesn’t make for exhilarating conversation. The insurance industry has done a relatively terrible job at marketing the value that insurance professionals bring to society. It’s natural to spread the stories of losses not covered and painful insurance claims. The fact is that Insurance policies and the carriers that back them have saved countless lives and restored the property and dignity of hundreds of millions of policyholders.</p>
-  <p>I want to help make insurance more accessible to people everywhere by sharing my own experiential knowledge, and offering coverage assessments for free. “Insurance professionals can be Trusted Advisors. Insurance coverage makes a difference at the most stressful times in our lives. Your broker is your partner and advocate when losses require you to look for help and support from your insurance carrier. You paid your premium…your carrier has assumed some of the risk…your broker will help you fulfill the promise of your contract.”</p>
-</div> */}

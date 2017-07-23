@@ -11,7 +11,7 @@
 }
 
 .auth-field {
-  border: 1px solid $green;
+  border: 1px solid $orange;
   padding: 14px 12px;
   margin: 8px;
   border-radius: 6px;
@@ -27,4 +27,32 @@
   text-align: center;
   color: $darkgrey;
   margin: 20px 28px;
+}
+
+.name {
+  width: 170%;
+}
+
+.session-errors {
+  font-family: 'Lora', serif;
+  color: $green;
+}
+
+.auth-button {
+  background-color: transparent;
+  border: 1px solid $green;
+  padding: 14px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  margin: 8px;
+}
+
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 1px solid black;
+  margin: 0 auto;
+  justify-content: center;
 }
