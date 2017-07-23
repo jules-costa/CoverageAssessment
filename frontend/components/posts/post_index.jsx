@@ -11,7 +11,7 @@ class PostIndex extends React.Component {
     return(
       <div>
         <NavbarContainer />
-        <section>
+        <section className="behind-feed">
           <div className="feed-wrapper">
             <section className="feed">
               {this.props.posts.map((post, i) => <PostIndexItem key={post.id} post={post} />)}
