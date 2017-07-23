@@ -7,7 +7,7 @@ import PostFormContainer from './posts/post_form_container';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
-  <div>
+  <div className="route-wrapper">
     <Route exact path="/" component={PostIndexContainer} />
     <Route exact path="/about" component={GreetingContainer} />
     <Route exact path="/login" component={SessionContainer} />

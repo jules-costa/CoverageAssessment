@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.route-wrapper {
 
+}
 .input-fields {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
 }
 
 .auth-field {
-  border: 1px solid $orange;
+  border: 1px solid $grey;
   padding: 14px 12px;
   margin: 8px;
   border-radius: 6px;
@@ -43,16 +45,23 @@
 
 .auth-button {
   background-color: transparent;
-  border: 1px solid $green;
+  border: 1px solid $grey;
   padding: 14px 12px;
   border-radius: 6px;
   text-align: center;
   font-size: 14px;
+  color: $darkgrey;
   margin: 8px;
 }
 
+.auth-button:hover {
+  background-color: $green;
+  color: white;
+}
+
 .behind-auth-form-container {
-  background-color: red;
+  background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500842203/luigi-manga-253534_kbrowl.jpg');
+  background-size: cover;
   height: 100vh;
 }
 
@@ -60,9 +69,9 @@
   display: flex;
   flex-direction: column;
   width: 30%;
-  border: 1px solid black;
   margin: 0 auto;
   margin-top: 100px;
+  border-radius: 8px;
   justify-content: center;
   background-color: white;
 }
