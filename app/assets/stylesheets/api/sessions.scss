@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.route-wrapper {
-
+.navbar {
+  height: 0;
 }
 .input-fields {
   display: flex;
@@ -60,6 +60,8 @@
 }
 
 .behind-auth-form-container {
+  display: flex;
+  align-items: center;
   background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500842203/luigi-manga-253534_kbrowl.jpg');
   background-size: cover;
   height: 100vh;
@@ -70,7 +72,6 @@
   flex-direction: column;
   width: 30%;
   margin: 0 auto;
-  margin-top: 100px;
   border-radius: 8px;
   justify-content: center;
   background-color: white;
