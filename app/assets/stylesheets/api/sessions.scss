@@ -28,6 +28,12 @@
   margin: 16px 36px;
 }
 
+.auth-assurance {
+  color: $darkgrey;
+  width: 50%;
+  text-align: center;
+}
+
 .name {
   width: 170%;
 }
@@ -62,7 +68,8 @@
 
 .behind-auth-form-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500845686/ben-neale-245472_h5bu2b.jpg');
   background-size: cover;
   height: 100vh;
@@ -75,5 +82,4 @@
   border-radius: 8px;
   padding: 12px 0;
   justify-content: center;
-  margin-left: 200px;
 }

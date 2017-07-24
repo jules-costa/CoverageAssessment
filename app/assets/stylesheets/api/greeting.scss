@@ -4,7 +4,7 @@
 
 
 nav {
-  background: rgba(26, 145, 108, 0.55);
+  background: $green;
   padding: 0 20px;
 }
 
@@ -28,6 +28,10 @@ nav {
 
 .toggle-form {
   color: $green;
+}
+
+.auth-link {
+  color: $darkgrey;
 }
 
 .auth-link:hover {

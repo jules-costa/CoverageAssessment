@@ -93,11 +93,13 @@ class Session extends React.Component {
               {this.renderErrors()}
             </div>
             <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
-          <h5 className="auth-form">I will only use your email to answer your insurance questions.
+        </form>
+        <div className="auth-assurance">
+          <h5>I will only use your email to answer your insurance questions.
             You will not be solicited in any way.
             Your password is encrypted and protected on this site.
           </h5>
-        </form>
+        </div>
       </div>
     );
   }
