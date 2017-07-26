@@ -74,8 +74,9 @@ class Session extends React.Component {
   render() {
     return(
       <div className="behind-auth-form-container">
-        <form className="auth-form-container">
-          <h3 className="auth-form">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span> instead</h3>
+      <div className="behind-auth-form">
+        <form className="auth-form">
+          <h3 className="auth-header">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span> instead</h3>
             {this.showAdditionalFields()}
             <section className="input-fields">
               <input type="text"
@@ -94,13 +95,8 @@ class Session extends React.Component {
             </div>
             <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>
-        <div className="auth-assurance">
-          <h5>I will only use your email to answer your insurance questions.
-            You will not be solicited in any way.
-            Your password is encrypted and protected on this site.
-          </h5>
-        </div>
       </div>
+    </div>
     );
   }
 }
