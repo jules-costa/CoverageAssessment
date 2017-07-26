@@ -73,7 +73,7 @@
   flex-direction: column;
   background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500845686/ben-neale-245472_h5bu2b.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
 }
 
 .behind-auth-form {
@@ -84,8 +84,7 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  margin: 200px;
-  margin-bottom: 0;
+  margin: 200px 0 0 200px;
   // flex-basis: 375px;
   // border-radius: 8px;
   // padding: 12px 0;

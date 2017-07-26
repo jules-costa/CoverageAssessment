@@ -20,7 +20,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className="navbar-group">
-          <Link to={`/users/${this.props.currentUser.id}`} className="user-logo"><img className="user-image-small" src={this.props.currentUser.image_url} /></Link>
+          <Link to="/about" className="auth-link">About Frank</Link>
           <a href='' className="auth-link" onClick={this.handleLogout}>Log Out</a>
         </div>
       )
