@@ -20,6 +20,7 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault;
+    console.log(this.state);
     this.props.processForm(this.state)
   }
 
@@ -31,11 +32,15 @@ class PostForm extends React.Component {
     return (
       <form className="new-post-form">
         <input
+          className="post-title-input"
+          placeholder="Title"
           type="text"
           name="title"
           value={ this.state.title }
           onChange={ this.update("title") }/>
         <textarea
+          className="post-body-input"
+          placeholder="Let it flow..."
           type="text"
           name="body"
           value={ this.state.body }

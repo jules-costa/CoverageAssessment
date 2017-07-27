@@ -7,7 +7,7 @@ const postsReducer = (state = {}, action) => {
     case RECEIVE_ALL_POSTS:
       return merge({}, action.posts);
     case RECEIVE_POST:
-    if (action.post === null) {
+    if (action.post === undefined) {
       return merge({}, state, action.post);
     } else {
       const newPost = {[action.post.id]: action.post};
