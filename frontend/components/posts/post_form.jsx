@@ -3,37 +3,47 @@ import React from 'react';
 class PostForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       title: "",
       body: "",
       image_url: "",
       category_id: null
     }
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.toggleButton = this.toggleButton.bind(this);
   }
-  //
-  // update(field) {
-  //
-  // }
-  //
-  // handleSubmit(e) {
-  //   e.preventDefault;
-  //   if (this.props.match.)
-  //
-  // }
+
+  update(field) {
+    return (e) => this.setState({ [field] : e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault;
+    this.props.processForm(this.state)
+  }
+
+  toggleButton() {
+    return (this.props.formType === "write" ? "Create Post" : "Update Post")
+  }
 
   render () {
     return (
-      <h1>Hi</h1>
+      <form className="new-post-form">
+        <input
+          type="text"
+          name="title"
+          value={ this.state.title }
+          onChange={ this.update("title") }/>
+        <textarea
+          type="text"
+          name="body"
+          value={ this.state.body }
+          onChange={ this.update("body") }></textarea>
+        <button className="auth-button new-post-button" type="submit" onClick={this.handleSubmit}>{this.toggleButton()}</button>
+      </form>
     )
   }
 }
 
 export default PostForm;
-
-// <form onSubmit={ this.handleSubmit }>
-//   <input type="text" name="title" value={ this.state.title } onChange={ this.update("title") }/>
-//   <textarea type="text" name="body" value={ this.state.body } onChange={ this.update("body") }></textarea>
-// </form>
