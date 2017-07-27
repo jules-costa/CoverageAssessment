@@ -13,6 +13,7 @@ class Navbar extends React.Component {
     if (this.props.currentUser === null) {
       return (
         <section className="navbar-group session-links">
+          <Link to="/about" className="auth-link">About Frank</Link>
           <Link to="/signup" className="auth-link">Sign Up</Link>
           <Link to="/login" className="auth-link">Log In</Link>
         </section>
