@@ -14,6 +14,7 @@ const App = () => (
     <Route exact path="/signup" component={SessionContainer} />
     <Route exact path="/posts/:id" component={PostDetailContainer} />
     <Route exact path="/write" component={PostFormContainer} />
+    <Route exact path="/edit" component={PostFormContainer} />
   </div>
 );
 
