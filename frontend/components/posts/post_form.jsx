@@ -12,6 +12,7 @@ class PostForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.toggleButton = this.toggleButton.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(field) {
@@ -26,6 +27,19 @@ class PostForm extends React.Component {
 
   toggleButton() {
     return (this.props.formType === "write" ? "Create Post" : "Update Post")
+  }
+
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            * {error} *
+          </li>
+        ))}
+      </ul>
+    )
   }
 
   render () {
@@ -45,6 +59,7 @@ class PostForm extends React.Component {
           name="body"
           value={ this.state.body }
           onChange={ this.update("body") }></textarea>
+          {this.renderErrors()}
         <button className="auth-button new-post-button" type="submit" onClick={this.handleSubmit}>{this.toggleButton()}</button>
       </form>
     )
