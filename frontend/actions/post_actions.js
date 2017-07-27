@@ -22,6 +22,7 @@ export const updatePost = post => dispatch => (
   PostAPIUtil.updatePost(post).then(updatedPost => {
     dispatch(receiveSinglePost(updatedPost));
     dispatch(Err.clearErrors());
+    return updatedPost;
   }, err => (
     dispatch(Err.receiveErrors(err.responseJSON))
   ))
@@ -31,6 +32,7 @@ export const createPost = post => dispatch => (
   PostAPIUtil.createPost(post).then(createdPost => {
     dispatch(receiveSinglePost(createdPost));
     dispatch(Err.clearErrors());
+    return createdPost;
   }, err => (
     dispatch(Err.receiveErrors(err.responseJSON))
   ))

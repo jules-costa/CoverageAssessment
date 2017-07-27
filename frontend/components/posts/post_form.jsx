@@ -21,8 +21,7 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault;
-    console.log(this.state);
-    this.props.processForm(this.state)
+    this.props.processForm(this.state).then((post) => this.props.history.push(`/posts/${post.id}`))
   }
 
   toggleButton() {
