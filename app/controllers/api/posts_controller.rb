@@ -24,6 +24,7 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    render "api/posts/index.json.jbuilder"
   end
 
   def show

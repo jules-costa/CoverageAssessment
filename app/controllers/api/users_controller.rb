@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
     @user.category_id = 1
     if @user.save
       login(@user)
-      render "/api/users/show"
+      render "/api/users/show.json.jbuilder"
     else
       render json: @user.errors.full_messages, status: 422
     end
