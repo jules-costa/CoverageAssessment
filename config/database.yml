@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   database: CoverageAssessment_production
-  # username: rails
-  # password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
