@@ -5,13 +5,14 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
   host: localhost
-  # username: rails
+  username: rails
+  password: W0Ktw65IGh
 
 development:
   <<: *default
   database: CoverageAssessment_development
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  password: W0Ktw65IGh
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,4 +25,4 @@ production:
   <<: *default
   database: CoverageAssessment_production
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  password: W0Ktw65IGh
