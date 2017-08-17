@@ -48,6 +48,10 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+  gem 'rails', '~> 5.1.1'
+  gem 'pg'
+  gem 'puma', '~> 3.7'
+
 end
 
 group :development do
