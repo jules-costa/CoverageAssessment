@@ -8,7 +8,7 @@ end
 
 group :production do
   gem 'pg'
-  gem 'puma', '~> 3.7'
+  gem 'unicorn'
   # gem 'jquery_ujs'
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '~> 5.1.1'

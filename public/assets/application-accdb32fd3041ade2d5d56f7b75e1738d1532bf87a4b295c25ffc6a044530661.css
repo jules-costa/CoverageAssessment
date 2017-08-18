@@ -1,0 +1,361 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+/* line 1, /home/rails/CoverageAssessment/app/assets/stylesheets/base/reset.scss */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+}
+
+/* line 18, /home/rails/CoverageAssessment/app/assets/stylesheets/base/reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 22, /home/rails/CoverageAssessment/app/assets/stylesheets/base/reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 28, /home/rails/CoverageAssessment/app/assets/stylesheets/base/reset.scss */
+input[type="password"],
+input[type="text"],
+input[type="submit"],
+label,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* line 40, /home/rails/CoverageAssessment/app/assets/stylesheets/base/reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* line 1, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #2e2e2e;
+}
+
+/* line 5, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #2e2e2e;
+  font-size: 28px;
+  letter-spacing: 0.6px;
+}
+
+/* line 11, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #2e2e2e;
+}
+
+/* line 15, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h4 {
+  font-family: 'Lora', serif;
+  color: #2e2e2e;
+}
+
+/* line 19, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h5 {
+  font-family: 'Lora', serif;
+  color: #2e2e2e;
+}
+
+/* line 23, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+h6 {
+  font-family: 'Lora', serif;
+  color: #2e2e2e;
+}
+
+/* line 27, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+p {
+  font-family: 'Lora', serif;
+  line-height: 28px;
+  font-size: 17.5px;
+  word-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+/* line 35, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+p:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 39, /home/rails/CoverageAssessment/app/assets/stylesheets/base/layout.scss */
+button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* line 6, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+nav {
+  background: #40c76c;
+  padding: 0 20px;
+}
+
+/* line 11, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+}
+
+/* line 18, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.navbar-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  width: 255px;
+}
+
+/* line 26, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.session-links {
+  width: 300px;
+}
+
+/* line 30, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.toggle-form {
+  color: #40c76c;
+}
+
+/* line 34, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.auth-link {
+  color: #2e2e2e;
+}
+
+/* line 38, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.auth-link:hover {
+  color: white;
+}
+
+/* line 42, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.logo {
+  font-size: 18px;
+}
+
+/* line 46, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.logo-image {
+  width: 45px;
+  height: auto;
+  margin-right: 16px;
+}
+
+/* line 52, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.landing-page-container {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* line 58, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 63, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.about-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 69, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.about-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 75, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.header {
+  margin: 30px 0;
+}
+
+/* line 79, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.author-image {
+  border-radius: 300px;
+  width: 250px;
+  height: auto;
+  margin: 50px 0;
+  padding: 7px;
+  border-bottom: 2px solid #40c76c;
+  border-left: 2px solid #40c76c;
+}
+
+/* line 89, /home/rails/CoverageAssessment/app/assets/stylesheets/api/greeting.scss */
+.content {
+  margin-bottom: 75px;
+}
+
+/* line 12, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-field {
+  border: 1px solid #737373;
+  padding: 14px 12px;
+  margin: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* line 21, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+::placeholder {
+  color: #737373;
+}
+
+/* line 25, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-header {
+  text-align: center;
+  color: #2e2e2e;
+}
+
+/* line 31, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-assurance {
+  color: #2e2e2e;
+  width: 45%;
+  padding-left: 25px;
+}
+
+/* line 38, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.name {
+  width: 170%;
+}
+
+/* line 42, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.session-errors {
+  font-family: 'Lora', serif;
+  color: #91311a;
+  font-size: 12px;
+  text-align: center;
+  margin: 8px;
+}
+
+/* line 50, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-button {
+  background-color: transparent;
+  border: 1px solid #737373;
+  padding: 12px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 75px;
+  background-color: #40c76c;
+  color: white;
+  box-shadow: 2px 2px 2px #cbcbcb;
+}
+
+/* line 65, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-button:active {
+  box-shadow: 0 1px #cbcbcb;
+  transform: translateY(3px);
+}
+
+/* line 70, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.behind-auth-form-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-image: url("https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500845686/ben-neale-245472_h5bu2b.jpg");
+  background-size: cover;
+  height: 120vh;
+}
+
+/* line 84, /home/rails/CoverageAssessment/app/assets/stylesheets/api/sessions.scss */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  margin: 200px 0 0 200px;
+}
+
+/* line 5, /home/rails/CoverageAssessment/app/assets/stylesheets/api/posts.scss */
+.feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 750px;
+}
+
+/* line 19, /home/rails/CoverageAssessment/app/assets/stylesheets/api/posts.scss */
+.feed-item-wrapper {
+  margin: 30px 0;
+  padding: 6px 24px;
+  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+/* line 26, /home/rails/CoverageAssessment/app/assets/stylesheets/api/posts.scss */
+.post-body {
+  margin: 0;
+  margin-bottom: 75px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* line 35, /home/rails/CoverageAssessment/app/assets/stylesheets/api/posts.scss */
+.post-title-index {
+  padding: 12px 0;
+  font-size: 21px;
+  color: #40c76c;
+}
+
+/* line 41, /home/rails/CoverageAssessment/app/assets/stylesheets/api/posts.scss */
+.post-title {
+  padding: 24px 0;
+  font-size: 21px;
+  color: #40c76c;
+}
+
+/* line 1, /home/rails/CoverageAssessment/app/assets/stylesheets/api/post_form.scss */
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 7, /home/rails/CoverageAssessment/app/assets/stylesheets/api/post_form.scss */
+.post-title-input {
+  border: 1px solid;
+}
+
+/* line 11, /home/rails/CoverageAssessment/app/assets/stylesheets/api/post_form.scss */
+.post-body-input {
+  border: 1px solid;
+}
