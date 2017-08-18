@@ -9,6 +9,10 @@ end
 group :production do
   gem 'pg'
   gem 'unicorn'
+<<<<<<< HEAD
+=======
+  # gem 'puma', '~> 3.7'
+>>>>>>> 392449fd0001e3fc4309ec29834d4619dfee2f25
   # gem 'jquery_ujs'
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '~> 5.1.1'
@@ -48,6 +52,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+
 end
 
 group :development do
