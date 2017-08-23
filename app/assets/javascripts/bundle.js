@@ -20489,12 +20489,9 @@ var PostForm = function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this3 = this;
-
       e.preventDefault();
-      this.props.processForm(this.state).then(function (post) {
-        return _this3.props.history.push("/posts/" + post.id);
-      });
+      this.props.processForm(this.state);
+      // .then((post) => this.props.history.push(`/posts/${post.id}`));
     }
   }, {
     key: "toggleButton",
@@ -20532,7 +20529,7 @@ var PostForm = function (_React$Component) {
           value: this.state.title,
           onChange: this.update("title") }),
         _react2.default.createElement("textarea", {
-          className: "post-input post-body",
+          className: "post-input",
           placeholder: "Let it flow...",
           type: "text",
           name: "body",

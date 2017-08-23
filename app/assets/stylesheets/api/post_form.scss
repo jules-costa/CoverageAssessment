@@ -7,23 +7,26 @@
   justify-content: space-around;
 }
 
-.new-post-button {
-
-}
-
+// .new-post-button {
+//
+// }
+//
+// .post-body {
+//   height: 275px;
+// }
 .post-input {
   border: 1px solid;
   border-radius: 6px;
   padding: 16px 20px;
   width: 100%;
   margin: 16px;
-}
-
-.post-body {
-  height: 275px;
+  font-family: 'Lora', serif;
+  line-height: 28px;
+  font-size: 17.5px;
+  word-spacing: 3px;
 }
 
 ::placeholder {
-  font-size: 18px;
+  font-size: 17.5px;
   font-family: 'Lora' serif;
 }

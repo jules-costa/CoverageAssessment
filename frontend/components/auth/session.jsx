@@ -37,7 +37,7 @@ class Session extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state)
+    this.props.processForm(this.state);
   }
 
   showAdditionalFields() {
@@ -55,7 +55,7 @@ class Session extends React.Component {
             value={this.state.last_name}
             onChange={this.update('last_name')} />
         </section>
-      )
+      );
     }
   }
 

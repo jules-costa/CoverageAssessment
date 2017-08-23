@@ -21,13 +21,13 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then((post) => this.props.history.push(`/posts/${post.id}`));
+    this.props.processForm(this.state);
+    // .then((post) => this.props.history.push(`/posts/${post.id}`));
   }
 
   toggleButton() {
     return (this.props.formType === "write" ? "Create Post" : "Update Post");
   }
-
 
   renderErrors() {
     return (
@@ -52,7 +52,7 @@ class PostForm extends React.Component {
           value={ this.state.title }
           onChange={ this.update("title") }/>
         <textarea
-          className="post-input post-body"
+          className="post-input"
           placeholder="Let it flow..."
           type="text"
           name="body"
