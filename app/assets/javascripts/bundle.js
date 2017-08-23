@@ -20199,6 +20199,7 @@ var Navbar = function (_React$Component) {
 
     _this.sessionLinks = _this.sessionLinks.bind(_this);
     _this.handleLogout = _this.handleLogout.bind(_this);
+    _this.adminLinks = _this.adminLinks.bind(_this);
     return _this;
   }
 
@@ -20213,11 +20214,6 @@ var Navbar = function (_React$Component) {
             _reactRouterDom.Link,
             { to: '/about', className: 'auth-link' },
             'About Frank'
-          ),
-          _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/write', className: 'auth-link' },
-            'Write'
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
@@ -20244,6 +20240,24 @@ var Navbar = function (_React$Component) {
             { href: '', className: 'auth-link', onClick: this.handleLogout },
             'Log Out'
           )
+        );
+      }
+    }
+  }, {
+    key: 'adminLinks',
+    value: function adminLinks() {
+      console.log(this.props);
+      if (this.props.match.path === "/posts/:id") {
+        return _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/edit', className: 'auth-link' },
+          'Edit'
+        );
+      } else {
+        return _react2.default.createElement(
+          _reactRouterDom.Link,
+          { to: '/write', className: 'auth-link' },
+          'Write'
         );
       }
     }
@@ -20281,7 +20295,8 @@ var Navbar = function (_React$Component) {
             )
           )
         ),
-        this.sessionLinks()
+        this.sessionLinks(),
+        this.props.currentUser && this.props.currentUser.email === "frankpcosta@gmail.com" ? this.adminLinks() : ""
       );
     }
   }]);

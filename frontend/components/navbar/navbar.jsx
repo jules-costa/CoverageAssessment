@@ -7,6 +7,7 @@ class Navbar extends React.Component {
     super(props);
     this.sessionLinks = this.sessionLinks.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.adminLinks = this.adminLinks.bind(this);
   }
 
   sessionLinks () {
@@ -14,7 +15,6 @@ class Navbar extends React.Component {
       return (
         <section className="navbar-group session-links">
           <Link to="/about" className="auth-link">About Frank</Link>
-          <Link to="/write" className="auth-link">Write</Link>
           <Link to="/signup" className="auth-link">Sign Up</Link>
           <Link to="/login" className="auth-link">Log In</Link>
         </section>
@@ -25,6 +25,19 @@ class Navbar extends React.Component {
           <Link to="/about" className="auth-link">About Frank</Link>
           <a href='' className="auth-link" onClick={this.handleLogout}>Log Out</a>
         </div>
+      );
+    }
+  }
+
+  adminLinks () {
+    console.log(this.props);
+    if (this.props.match.path === "/posts/:id") {
+      return (
+        <Link to="/edit" className="auth-link">Edit</Link>
+      );
+    } else {
+      return (
+        <Link to="/write" className="auth-link">Write</Link>
       );
     }
   }
@@ -46,6 +59,7 @@ class Navbar extends React.Component {
           </Link>
         </section>
           {this.sessionLinks()}
+          {this.props.currentUser && this.props.currentUser.email ==="frankpcosta@gmail.com" ? this.adminLinks() : ""}
       </nav>
     );
   }

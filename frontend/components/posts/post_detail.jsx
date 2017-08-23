@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 import NavbarContainer from '../navbar/navbar_container';
 
