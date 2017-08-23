@@ -11792,53 +11792,45 @@ var Session = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'behind-auth-form-container' },
+        'form',
+        { className: 'auth-form' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'auth-header' },
+          'Please ',
+          this.props.formType,
+          ' or ',
+          _react2.default.createElement(
+            'span',
+            { className: 'toggle-form' },
+            this.navLink()
+          ),
+          ' instead'
+        ),
+        this.showAdditionalFields(),
+        _react2.default.createElement(
+          'section',
+          { className: 'input-fields' },
+          _react2.default.createElement('input', { type: 'text',
+            className: 'auth-field',
+            placeholder: 'Email',
+            value: this.state.email,
+            onChange: this.update('email') }),
+          _react2.default.createElement('input', { type: 'password',
+            className: 'auth-field',
+            placeholder: 'Password (min. 6 characters)',
+            value: this.state.password,
+            onChange: this.update('password') })
+        ),
         _react2.default.createElement(
           'div',
-          { className: 'behind-auth-form' },
-          _react2.default.createElement(
-            'form',
-            { className: 'auth-form' },
-            _react2.default.createElement(
-              'h3',
-              { className: 'auth-header' },
-              'Please ',
-              this.props.formType,
-              ' or ',
-              _react2.default.createElement(
-                'span',
-                { className: 'toggle-form' },
-                this.navLink()
-              ),
-              ' instead'
-            ),
-            this.showAdditionalFields(),
-            _react2.default.createElement(
-              'section',
-              { className: 'input-fields' },
-              _react2.default.createElement('input', { type: 'text',
-                className: 'auth-field',
-                placeholder: 'Email',
-                value: this.state.email,
-                onChange: this.update('email') }),
-              _react2.default.createElement('input', { type: 'password',
-                className: 'auth-field',
-                placeholder: 'Password (min. 6 characters)',
-                value: this.state.password,
-                onChange: this.update('password') })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'session-errors' },
-              this.renderErrors()
-            ),
-            _react2.default.createElement(
-              'button',
-              { className: 'auth-button', type: 'submit', onClick: this.handleSubmit },
-              'Submit'
-            )
-          )
+          { className: 'session-errors' },
+          this.renderErrors()
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'auth-button', type: 'submit', onClick: this.handleSubmit },
+          'Submit'
         )
       );
     }

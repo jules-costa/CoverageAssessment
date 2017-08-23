@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 .auth-field {
   border: 1px solid $grey;
   padding: 14px 12px;
@@ -62,26 +60,21 @@
   transform: translateY(3px);
 }
 
-.behind-auth-form-container {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500845686/ben-neale-245472_h5bu2b.jpg');
-  background-size: cover;
-  height: 120vh;
-}
-
-.behind-auth-form {
-  // height: 100%;
-}
+// .behind-auth-form-container {
+//   display: flex;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   background-image: url('https://res.cloudinary.com/jules-costa/image/upload/c_scale,w_1200/v1500845686/ben-neale-245472_h5bu2b.jpg');
+//   background-size: cover;
+//   height: 120vh;
+// }
 
 
 .auth-form {
   display: flex;
   flex-direction: column;
-  margin: 200px 0 0 200px;
-  // flex-basis: 375px;
-  // border-radius: 8px;
-  // padding: 12px 0;
-  // justify-content: center;
+  width: 350px;
+  height: 500px;
+  margin: 0 auto;
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import * as SessionAPIUtil from '../../actions/session_actions';
 
 class Session extends React.Component {
@@ -73,30 +73,26 @@ class Session extends React.Component {
 
   render() {
     return(
-      <div className="behind-auth-form-container">
-      <div className="behind-auth-form">
-        <form className="auth-form">
-          <h3 className="auth-header">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span> instead</h3>
-            {this.showAdditionalFields()}
-            <section className="input-fields">
-              <input type="text"
-                className="auth-field"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')} />
-              <input type="password"
-                className="auth-field"
-                placeholder="Password (min. 6 characters)"
-                value={this.state.password}
-                onChange={this.update('password')} />
-            </section>
-            <div className="session-errors">
-              {this.renderErrors()}
-            </div>
-            <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
-        </form>
-      </div>
-    </div>
+      <form className="auth-form">
+        <h3 className="auth-header">Please {this.props.formType} or <span className="toggle-form">{this.navLink()}</span> instead</h3>
+          {this.showAdditionalFields()}
+          <section className="input-fields">
+            <input type="text"
+              className="auth-field"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.update('email')} />
+            <input type="password"
+              className="auth-field"
+              placeholder="Password (min. 6 characters)"
+              value={this.state.password}
+              onChange={this.update('password')} />
+          </section>
+          <div className="session-errors">
+            {this.renderErrors()}
+          </div>
+          <button className="auth-button" type="submit" onClick={this.handleSubmit}>Submit</button>
+      </form>
     );
   }
 }
