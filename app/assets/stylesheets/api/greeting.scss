@@ -8,6 +8,7 @@ nav {
   padding: 0 20px;
 }
 
+
 .navbar {
   display: flex;
   align-items: center;
@@ -33,6 +34,12 @@ nav {
 
 .auth-link {
   color: $darkgrey;
+}
+
+.more-links {
+  display: flex;
+  justify-content: space-between;
+  width: 68%;
 }
 
 .auth-link:hover {

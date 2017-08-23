@@ -20229,7 +20229,7 @@ var Navbar = function (_React$Component) {
       } else {
         return _react2.default.createElement(
           'div',
-          { className: 'navbar-group' },
+          { className: 'more-links' },
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/about', className: 'auth-link' },
@@ -20246,7 +20246,6 @@ var Navbar = function (_React$Component) {
   }, {
     key: 'adminLinks',
     value: function adminLinks() {
-      console.log(this.props);
       if (this.props.match.path === "/posts/:id") {
         return _react2.default.createElement(
           _reactRouterDom.Link,
@@ -20295,8 +20294,12 @@ var Navbar = function (_React$Component) {
             )
           )
         ),
-        this.sessionLinks(),
-        this.props.currentUser && this.props.currentUser.email === "frankpcosta@gmail.com" ? this.adminLinks() : ""
+        _react2.default.createElement(
+          'section',
+          { className: 'navbar-group session-links' },
+          this.sessionLinks(),
+          this.props.currentUser && this.props.currentUser.email === "frankpcosta@gmail.com" ? this.adminLinks() : ""
+        )
       );
     }
   }]);
@@ -20808,7 +20811,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
-  var store = (0, _store2.default)();
+  var store = void 0;
+  if (window.currentUser) {
+    var preloadedState = { currentUser: window.currentUser };
+    store = (0, _store2.default)(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = (0, _store2.default)();
+  }
   window.getState = store.getState;
   _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 });

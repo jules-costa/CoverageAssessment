@@ -21,7 +21,7 @@ class Navbar extends React.Component {
       );
     } else {
       return (
-        <div className="navbar-group">
+        <div className="more-links">
           <Link to="/about" className="auth-link">About Frank</Link>
           <a href='' className="auth-link" onClick={this.handleLogout}>Log Out</a>
         </div>
@@ -30,7 +30,6 @@ class Navbar extends React.Component {
   }
 
   adminLinks () {
-    console.log(this.props);
     if (this.props.match.path === "/posts/:id") {
       return (
         <Link to="/edit" className="auth-link">Edit</Link>
@@ -58,8 +57,10 @@ class Navbar extends React.Component {
             <h2 className="logo">Coverage Assessment</h2>
           </Link>
         </section>
+        <section className="navbar-group session-links">
           {this.sessionLinks()}
           {this.props.currentUser && this.props.currentUser.email ==="frankpcosta@gmail.com" ? this.adminLinks() : ""}
+        </section>
       </nav>
     );
   }
