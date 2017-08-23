@@ -1,13 +1,29 @@
 .new-post-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 500px;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-around;
 }
 
-.post-title-input {
-  border: 1px solid;
+.new-post-button {
+
 }
 
-.post-body-input {
+.post-input {
   border: 1px solid;
+  border-radius: 6px;
+  padding: 16px 20px;
+  width: 100%;
+  margin: 16px;
+}
+
+.post-body {
+  height: 275px;
+}
+
+::placeholder {
+  font-size: 18px;
+  font-family: 'Lora' serif;
 }

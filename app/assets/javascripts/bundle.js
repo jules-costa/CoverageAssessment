@@ -20486,7 +20486,7 @@ var PostForm = function (_React$Component) {
     value: function handleSubmit(e) {
       var _this3 = this;
 
-      e.preventDefault;
+      e.preventDefault();
       this.props.processForm(this.state).then(function (post) {
         return _this3.props.history.push("/posts/" + post.id);
       });
@@ -20520,14 +20520,14 @@ var PostForm = function (_React$Component) {
         "form",
         { className: "new-post-form" },
         _react2.default.createElement("input", {
-          className: "post-title-input",
+          className: "post-input",
           placeholder: "Title",
           type: "text",
           name: "title",
           value: this.state.title,
           onChange: this.update("title") }),
         _react2.default.createElement("textarea", {
-          className: "post-body-input",
+          className: "post-input post-body",
           placeholder: "Let it flow...",
           type: "text",
           name: "body",

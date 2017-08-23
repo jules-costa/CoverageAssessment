@@ -8,7 +8,7 @@ class PostForm extends React.Component {
       body: "",
       image_url: "",
       category_id: null
-    }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.toggleButton = this.toggleButton.bind(this);
@@ -20,7 +20,7 @@ class PostForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault;
+    e.preventDefault();
     this.props.processForm(this.state).then((post) => this.props.history.push(`/posts/${post.id}`))
   }
 
@@ -45,14 +45,14 @@ class PostForm extends React.Component {
     return (
       <form className="new-post-form">
         <input
-          className="post-title-input"
+          className="post-input"
           placeholder="Title"
           type="text"
           name="title"
           value={ this.state.title }
           onChange={ this.update("title") }/>
         <textarea
-          className="post-body-input"
+          className="post-input post-body"
           placeholder="Let it flow..."
           type="text"
           name="body"
