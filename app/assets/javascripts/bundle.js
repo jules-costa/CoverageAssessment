@@ -19946,7 +19946,8 @@ var _root_reducer2 = _interopRequireDefault(_root_reducer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var configureStore = function configureStore() {
-  return (0, _redux.createStore)(_root_reducer2.default, (0, _redux.applyMiddleware)(_thunk2.default));
+  var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return (0, _redux.createStore)(_root_reducer2.default, preloadedState, (0, _redux.applyMiddleware)(_thunk2.default));
 };
 
 exports.default = configureStore;
@@ -20805,7 +20806,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var root = document.getElementById('root');
   var store = void 0;
   if (window.currentUser) {
-    var preloadedState = { currentUser: window.currentUser };
+    var preloadedState = { session: window.currentUser };
     store = (0, _store2.default)(preloadedState);
     delete window.currentUser;
   } else {
