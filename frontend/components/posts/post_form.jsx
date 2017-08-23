@@ -21,11 +21,11 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then((post) => this.props.history.push(`/posts/${post.id}`))
+    this.props.processForm(this.state).then((post) => this.props.history.push(`/posts/${post.id}`));
   }
 
   toggleButton() {
-    return (this.props.formType === "write" ? "Create Post" : "Update Post")
+    return (this.props.formType === "write" ? "Create Post" : "Update Post");
   }
 
 
@@ -38,7 +38,7 @@ class PostForm extends React.Component {
           </li>
         ))}
       </ul>
-    )
+    );
   }
 
   render () {
@@ -61,7 +61,7 @@ class PostForm extends React.Component {
           {this.renderErrors()}
         <button className="auth-button new-post-button" type="submit" onClick={this.handleSubmit}>{this.toggleButton()}</button>
       </form>
-    )
+    );
   }
 }
 

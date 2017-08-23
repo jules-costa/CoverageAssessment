@@ -20216,6 +20216,11 @@ var Navbar = function (_React$Component) {
           ),
           _react2.default.createElement(
             _reactRouterDom.Link,
+            { to: '/write', className: 'auth-link' },
+            'Write'
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
             { to: '/signup', className: 'auth-link' },
             'Sign Up'
           ),

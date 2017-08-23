@@ -14,24 +14,25 @@ class Navbar extends React.Component {
       return (
         <section className="navbar-group session-links">
           <Link to="/about" className="auth-link">About Frank</Link>
+          <Link to="/write" className="auth-link">Write</Link>
           <Link to="/signup" className="auth-link">Sign Up</Link>
           <Link to="/login" className="auth-link">Log In</Link>
         </section>
-      )
+      );
     } else {
       return (
         <div className="navbar-group">
           <Link to="/about" className="auth-link">About Frank</Link>
           <a href='' className="auth-link" onClick={this.handleLogout}>Log Out</a>
         </div>
-      )
+      );
     }
   }
 
   handleLogout (e) {
     e.preventDefault();
     this.props.logout().then(user => this.props.history.push('/'));
-  };
+  }
 
   render() {
     return (
